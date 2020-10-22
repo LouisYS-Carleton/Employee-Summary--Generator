@@ -1,6 +1,9 @@
 # Employee Summary Generator
 An employee summary HTML generator, designed to help employers speed up the process of logging in and saving info related to all employees.
 
+## Youtube Demonstration
+[Employee Summary Generator Youtube Link](https://www.youtube.com/watch?v=srLIPtIVEzg&t=6s&ab_channel=LouisYacksmith)
+
 <img src="./Assets/terminaltestpicture.png" alt="Terminal prompts">
 <img src="./Assets/testhtmlpicture.png" alt="Generated HTML file">
 
