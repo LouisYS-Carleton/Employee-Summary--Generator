@@ -52,7 +52,7 @@ const employeeInfo = () => {
         break;
         case 'Intern':
             specificEmployeeInfo(role, "school", "Please enter the name of the school that the intern attended.", answersShared);
-        break
+        break;
       }
     });
 }
@@ -71,7 +71,7 @@ const specificEmployeeInfo = (role, userInput, userMessage, answersShared) => {
 
       for (let keys in userAnswers) {
         userAnswerInput = userAnswers[keys]
-      }
+      };
 
       const { name, id, email } = answersShared;
       let currentEmployee;
@@ -79,13 +79,13 @@ const specificEmployeeInfo = (role, userInput, userMessage, answersShared) => {
       switch(role) {
         case 'Manager':
           currentEmployee = new Manager(name, id, email, userAnswerInput)
-        break
+        break;
         case 'Engineer':
           currentEmployee = new Engineer(name, id, email, userAnswerInput)
-        break
+        break;
         case 'Intern':
           currentEmployee = new Intern(name, id, email, userAnswerInput)
-        break
+        break;
       }
       employeesCompleteInfo.push(currentEmployee);
       addAnotherEmployee();
@@ -105,10 +105,10 @@ const addAnotherEmployee = () => {
     ])
     .then(answer => {
       if (answer.additionalEmployeesPrompt === true) {
-        employeeInfo()
+        employeeInfo();
       } else {
-          const generateHTML = render(employeesCompleteInfo)
-          copyEmployeeInfoToHTML(generateHTML)
+          const generateHTML = render(employeesCompleteInfo);
+          copyEmployeeInfoToHTML(generateHTML);
         }
     })
 }
@@ -122,4 +122,4 @@ const copyEmployeeInfoToHTML = (generateHTML) => {
   });
 };
 
-employeeInfo()
+employeeInfo();
