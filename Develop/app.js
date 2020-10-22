@@ -70,11 +70,11 @@ const specificEmployeeInfo = (role, userInput, userMessage, answersShared) => {
       let userAnswerInput;
 
       for (let keys in userAnswers) {
-        userAnswersInput = userAnswers[keys]
+        userAnswerInput = userAnswers[keys]
       }
 
       const { name, id, email } = answersShared;
-      let currentEmployee
+      let currentEmployee;
 
       switch(role) {
         case 'Manager':
@@ -103,13 +103,13 @@ const addAnotherEmployee = () => {
         default: false
       }
     ])
-    .then(answers => {
-      if (answers.additionalEmployeesPrompt === true) {
+    .then(answer => {
+      if (answer.additionalEmployeesPrompt === true) {
         employeeInfo()
       } else {
-        const generateHTML = render(employeesCompleteInfo)
-        copyEmployeeInfoToHTML(generateHTML)
-      }
+          const generateHTML = render(employeesCompleteInfo)
+          copyEmployeeInfoToHTML(generateHTML)
+        }
     })
 }
 
